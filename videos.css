@@ -1,0 +1,352 @@
+body, html {
+    height: 100%;
+    background-color: rgb(151, 84, 84);
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .bg-image {
+    /* The image used */
+    background-image: url("../sample/image/ocean.png");
+    
+  
+    /* Add the blur effect */
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  
+    /* Full height */
+    height: 88%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  
+  /* Position text in the middle of the page/image */
+  .aboutme  {
+    background-color: transparent; /* Fallback color */
+    background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    border: 2px solid #f1f1f1;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    
+  }
+
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+  @media screen and (max-width: 500px) {
+    .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+/*navigation bar*/
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(79, 44, 44, 0.5);
+    margin-bottom: 0;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+  }
+  
+  .brand-title {
+    
+    font-size: 2.5rem;
+    margin: 10px;
+    color: rgb(228, 227, 227);
+
+
+  }
+  
+  .navbar-links {
+    height: 100%;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  .navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+    text-indent: 0;
+  }
+  
+  .navbar-links li:hover {
+    background-color: rgba(146, 146, 146, 0.377);
+    border-radius: 7px;
+    box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .toggle-button {
+        display: flex;
+    }
+  
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+  
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+  
+    .navbar-links ul li {
+        text-align: center;
+    }
+  
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+  
+    .navbar-links.active {
+        display: flex;
+    }
+    .dropdown-content {
+      text-align: center;
+      margin-left: 30%;
+    }
+    .dropbtn {
+      text-align: center;
+      margin-left: 30%;
+      
+    }
+  }
+
+  /*DROPDOWN*/
+
+  .dropbtn {
+    background-color: transparent;
+    color: rgb(248, 248, 248);
+    padding: 16px;
+    font-size: 15px;
+    border: none;
+    text-shadow: 2px 2px 5px rgb(238, 234, 230);
+    display: block;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    text-decoration: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    background-color: rgba(0, 0, 0);
+    box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    text-decoration: none;
+    background-color: rgb(171, 166, 166);
+    box-shadow: 0px 8px 16px 0px rgb(250, 250, 250);
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    color: #e6e6e6;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: rgba(146, 146, 146, 0.377);
+    box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+    border-radius: 7px;
+  }
+/*--------------------------------------------------------------------------------*/
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+  }
+  
+  .container{
+    margin-right: 40%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding:0 10%;
+    background:linear-gradient(90deg, rgb(87, 84, 84) 60%, rgb(102, 66, 66) 40.1%);
+  }
+  
+  .container .side-bar{
+   
+    width: 250px;
+  }
+  
+  .container .side-bar.active{
+    display: none;
+  }
+  
+  .container .side-bar .list{
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  
+  .container .side-bar .list li{
+    padding:10px 0;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    color: #fff;
+  }
+  
+  .container .side-bar .list li::before{
+    content: '';
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    left:-5px;
+    width: 0%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    transition: width .2s linear .2s;
+  }
+  
+  .container .side-bar .list li.active,
+  .container .side-bar .list li:hover{
+    font-size: 20px;
+  }
+  
+  .container .side-bar .list li.active::before,
+  .container .side-bar .list li:hover::before{
+    right: -5px;
+    width: 105%;
+  }
+  
+  .container .video-container{
+    flex:1;
+
+  }
+  
+  .container .video-container video{
+    width: 150%;
+    object-fit: cover;
+  }
+  
+  #menu-btn{
+    position: fixed;
+    top:20px; left:30px;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  @media (max-width:1200px){
+    .container{
+      position: relative;
+    }
+  
+    .container .side-bar{
+      position: absolute;
+      top:0; left:-110%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 10;
+      padding:30px;
+    }
+  
+    .container .side-bar .list{
+      height: 100%;
+      justify-content: center;
+    }
+  
+    .container .side-bar.active{
+      box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+      display: initial;
+      left:0;
+    }
+  }
+  
+  @media (max-width:450px){
+  
+    .container{
+      padding:20px;
+    }
+  
+    .container .side-bar{
+      width: 250px;
+    }
+  
+    .container .side-bar .list li{
+      font-size: 15px;
+    }
+  
+    .container .side-bar .list li.active{
+      font-size: 20px;
+    }
+  
+  }

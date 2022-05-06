@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="icon" href="../sample/image/CARD.png" type="image/x-icon">
+    <title>videos</title>
+    <link rel="stylesheet" href="videos.css">
+</head>
+<body>
+
+    <div class="bg-image"></div>
+  
+
+    <div class="aboutme">
+      <a>VIDEOS</a>
+      
+    </div>
+    <nav class="navbar">
+        <div class="brand-title">Prof. Princess Tucio</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="explore.html">ABOUT ME</a></li>
+            <li><a href="published.html">CURRENT RESEARCH</a></li>
+            <li><a href="videos.html">VIDEOS</a></li>
+            <div class="dropdown">
+              <button class="dropbtn">REFERENCES</button>
+              <div class="dropdown-content">
+                <a href="../sample/documents/Astronomy-LR.pdf#toolbar=0">MATERIAL 1</a>
+                <a href="../sample/documents/58277main_Space.Based.Astronomy.pdf#toolbar=0">MATERIAL 2</a>
+                <a href="../sample/documents/big ideas astronomy.pdf#toolbar=0">MATERIAL 3</a>
+              </div>
+                </div>
+          </ul>
+        </div>
+      </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+<div class="container">
+
+    <div class="side-bar">
+
+        <ul class="list">
+            <li class="active" data-src="image/Light Pollution 101 _ National Geographic.mp4">Light Pollution 101</li>
+            <li data-src="image/Astronomy 101_ Understanding Light in Space.mp4">Understanding light in space</li>
+            <li data-src="image/Bortle Scale - How to find the stars in the night sky!!.mp4">Bortle Scale</li>
+            <li data-src="image/Astronomy - Ch. 2_ Understanding the Night Sky (2 of 23) What is the Ecliptic Plane_.mp4">Understanding the night sky</li>
+            <li data-src="image/The History Of Astronomy.mp4">The History of Astronomy</li>
+            <li data-src="image/videoplayback.mp4">About Career In Astronomy</li>
+        </ul>
+
+    </div>
+
+    <div class="video-container">
+        <video src="../sample/image/Light Pollution 101 _ National Geographic.mp4" loop muted autoplay controls></video>
+    </div>
+
+</div>
+
+<script>
+
+let sideBar = document.querySelector('.container .side-bar');
+
+document.querySelector('#menu-btn').onclick = () =>{
+    sideBar.classList.toggle('active');
+};
+
+let video = document.querySelector('.container .video-container video');
+let videoLinks = document.querySelectorAll('.container .side-bar .list li');
+
+videoLinks.forEach(link =>{
+    link.onclick = () =>{
+        let src = link.getAttribute('data-src');
+        video.src = src;
+        sideBar.classList.remove('active');
+        videoLinks.forEach(remove =>{remove.classList.remove('active')});
+        link.classList.add('active');
+    }
+
+})
+
+</script>
+
+<script>
+    const toggleButton = document.getElementsByClassName('toggle-button')[0]
+    const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+  
+    toggleButton.addEventListener('click', () => {
+    navbarLinks.classList.toggle('active')
+    })
+  </script>
+
+</body>
+</html>

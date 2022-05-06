@@ -1,0 +1,111 @@
+body {
+    background-image:  url(../sample/image/cloud-atmosphere-sky-ecoregion-nature-natural-environment-2066629-wallhere.com.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Barlow', sans-serif;
+    height: 100vh;
+  }
+  .published{
+    background: linear-gradient(-70deg, rgba(194, 178, 178, 0.2) 30%, rgba(0, 0, 0, 0) 30%), url(../sample/image/atmosphere-sky-vertebrate-world-purple-organism-2064783-wallhere.com.jpg);
+    background-color: darkgray;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-size: cover;
+    
+    
+     
+    
+  }
+  .published .news-title {
+
+      text-align:center;
+      padding-top:30px;
+      padding-bottom:30px;
+      font-family: 'nimbus-sans-condensed', sans-serif;
+      font-size:55px;
+      font-weight:bold;
+      color: rgb(211, 181, 181);
+      text-shadow: 2px 2px 5px rgb(0, 0, 0);
+      
+      
+      
+  }
+  .published .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      
+      
+  }
+  .published .ct-blog {
+      margin-bottom: 30px;
+      
+  }
+
+  .ct-blog .inner {
+      background: rgba(183, 87, 87, 0.5);
+      padding: 10px;
+      transition: all 0.2s ease-in-out 0s;
+      cursor: pointer;
+      height: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+  }
+
+  .ct-blog .inner:hover {
+      background-color: #792d2dcd;
+      color: black;
+      opacity: 1;
+  }
+  .ct-blog .fauxcrop {
+      height: 200px;
+      overflow: hidden;
+      
+  }
+  .ct-blog .fauxcrop img {
+      width: 100%;
+  }
+  .ct-blog-content {
+      display: table;
+      padding: 30px 0 28px;
+      
+      
+  }
+  .ct-blog-content .ct-blog-date {
+      border-right: 1px solid #000000;
+      display: table-cell;
+      font-family: "Lato", sans-serif;
+      padding: 0px 18px 0px 15px;
+      text-align: center;
+      
+  }
+  .ct-blog-content .ct-blog-date span {
+      font-size: 16px;
+      color: rgb(203, 203, 203);  
+      font-weight: 700;
+      display: block;
+      line-height: 1;
+      opacity: 1;
+  }
+  .ct-blog-content .ct-blog-date strong {
+      font-size: 25px;
+      color: rgb(202, 202, 202);
+        
+      
+    }
+  .ct-blog-content .ct-blog-header {
+      color: rgb(219, 218, 218);
+      display: table-cell;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      line-height: 1.1;
+      padding: 0 20px;
+      vertical-align: top;
+      
+  }
+  .fauxcrop h5 {
+    color: rgb(220, 220, 220);
+    margin-bottom: 0%;
+  }
